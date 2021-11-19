@@ -1,0 +1,103 @@
+.lightSaber {
+  --height: 10px;
+
+  position: relative;
+  display: flex;
+  margin: auto;
+
+  & * {
+    height: var(--height);
+  }
+
+  & .handle {
+    z-index: 1;
+    display: flex;
+
+    & .metal {
+      width: 20px;
+      background: #e7e4db;
+
+      &.black {
+        display: flex;
+
+        &.grip {
+          display: flex;
+          flex-direction: column;
+        }
+
+        & div {
+          flex: 1;
+          background: #524964;
+
+          &:nth-child(even) {
+            background: #25152c;
+          }
+        }
+      }
+    }
+
+    & .gold {
+      width: calc(var(--blade-length) * 0.02);
+      background: #f6b461;
+    }
+
+    & .pommel {
+      width: 8px !important;
+      border-radius: 30% 0 0 30%;
+    }
+
+    & .controls {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      & .gold {
+        width: 50%;
+        height: 50%;
+        border: 1px solid #524964;
+      }
+    }
+
+    & .emitter {
+      width: calc(var(--blade-length) * 0.01) !important;
+    }
+  }
+
+  & .blade {
+    --color: rgb(55 132 214 /100%);
+
+    position: relative;
+    left: -1px;
+    width: var(--blade-length);
+    filter: blur(1px);
+    background:
+      linear-gradient(
+        to bottom,
+        var(--color) 0%,
+        rgb(254 254 254 / 100%) 30%,
+        rgb(254 254 254 / 100%) 47%,
+        rgb(254 254 254 / 100%) 71%,
+        var(--color) 100%
+      );
+    border-radius: 0 12px 12px 0;
+    animation: 2s infinite alternate glow;
+  }
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 2px 0 5px -1px var(--color);
+  }
+
+  25% {
+    box-shadow: 2px 0 10px -1px var(--color);
+  }
+
+  75% {
+    box-shadow: 2px 0 5px -1px var(--color);
+  }
+
+  100% {
+    box-shadow: 2px 0 15px -1px var(--color);
+  }
+}

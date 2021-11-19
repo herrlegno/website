@@ -1,0 +1,10 @@
+@keyframes slide-in-bottom {
+  0% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

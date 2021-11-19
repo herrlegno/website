@@ -17,3 +17,11 @@ body {
     "Helvetica Neue",
     sans-serif;
 }
+
+* {
+  cursor: none;
+}
+
+#__next {
+  min-height: 100vh;
+}

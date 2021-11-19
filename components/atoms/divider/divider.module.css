@@ -1,0 +1,45 @@
+.divider {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  align-items: center;
+
+  & span {
+    text-transform: capitalize;
+    font-weight: bold;
+  }
+
+  &.center {
+    &::before,
+    &::after {
+      flex: 1;
+    }
+  }
+
+  &.start {
+    &::before {
+      width: 30px;
+    }
+
+    &::after {
+      flex: 1;
+    }
+  }
+
+  &.end {
+    &::before {
+      flex: 1;
+    }
+
+    &::after {
+      width: 30px;
+    }
+  }
+
+  &::before,
+  &::after {
+    content: " ";
+    height: 1px;
+    background: rgb(234 234 234);
+  }
+}

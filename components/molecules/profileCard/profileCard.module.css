@@ -1,0 +1,45 @@
+.card {
+  margin-top: 60px;
+  padding: 70px 20px 20px;
+  background: rgb(255 255 255 / 35%);
+  box-shadow: 0 0 32px 0 rgb(55 132 214 /30%);
+  backdrop-filter: blur(8px);
+  border-radius: 10px;
+  border: 1px solid rgb(255 255 255 / 18%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  & .imageContainer {
+    top: -60px;
+    position: absolute;
+    height: 120px;
+    width: 120px;
+
+    & .image {
+      border-radius: 50%;
+      border: 3px solid white !important;
+    }
+  }
+
+  & .name {
+    text-align: center;
+    color: var(--secondary);
+  }
+
+  & .contactLinks {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+
+    & a {
+      color: white;
+
+      &:hover {
+        color: rgb(55 132 214 /100%);
+        filter: drop-shadow(0 0 5px rgb(55 132 214 /100%));
+      }
+    }
+  }
+}
