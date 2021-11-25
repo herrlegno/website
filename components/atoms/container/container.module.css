@@ -1,13 +1,17 @@
 .container {
+  display: flex;
   padding: 0 20px;
-  max-width: 1300px;
-  width: 100%;
 
   @media (--xl) {
     padding: 0;
   }
-}
 
-.center {
-  margin: 0 auto;
+  &.center {
+    justify-content: center;
+  }
+
+  & .content {
+    max-width: 1300px;
+    width: 100%;
+  }
 }

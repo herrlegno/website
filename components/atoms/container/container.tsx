@@ -19,7 +19,7 @@ const Container = ({
         [styles.center]: center,
       })}
     >
-      {children}
+      <div className={styles.content}>{children}</div>
     </div>
   );
 };
