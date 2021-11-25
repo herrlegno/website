@@ -7,35 +7,6 @@ const Cursor = () => {
   const circleRef = useRef<SVGCircleElement>(null);
   useFollowMouse(cursorRef);
 
-  // useEffect(() => {
-  //   const element = cursorRef.current;
-  //   const circle = circleRef.current;
-  //   if (element && circle) {
-  //     const defaultSize = circle.getAttribute("cx");
-  //     const radius = 10;
-  //     console.log(defaultSize);
-  //     const setSize = (size) => {
-  //       circle.setAttribute("cx", size / 2);
-  //       circle.setAttribute("cy", size / 2);
-  //       circle.setAttribute("r", size);
-  //     };
-  //
-  //     const clickables = document.querySelectorAll("a");
-  //
-  //     clickables.forEach((el) => {
-  //       el.addEventListener("mouseenter", () => setSize(radius));
-  //       el.addEventListener("mouseleave", () => setSize(defaultSize));
-  //     });
-  //
-  //     return () => {
-  //       clickables.forEach((el) => {
-  //         el.removeEventListener("mouseenter", () => setSize(radius));
-  //         el.removeEventListener("mouseleave", () => setSize(defaultSize));
-  //       });
-  //     };
-  //   }
-  // }, [cursorRef]);
-
   return (
     <div className={styles.cursor}>
       <div className={styles.circle}>
