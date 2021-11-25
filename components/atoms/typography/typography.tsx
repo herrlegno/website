@@ -2,7 +2,7 @@ import { ElementType, ReactNode } from "react";
 import classnames from "classnames";
 import styles from "./typography.module.css";
 
-type ITypographyVariants = "h1" | "h2" | "h3" | "h4" | "p";
+type ITypographyVariants = "h1" | "h2" | "h3" | "h4" | "p" | "span";
 
 export interface ITypographyProps {
   children: ReactNode;
@@ -51,6 +51,10 @@ Typography.h4 = (props: ITypographyProps) => (
 );
 Typography.p = (props: ITypographyProps) => (
   <Typography component="p" {...props} />
+);
+
+Typography.span = (props: ITypographyProps) => (
+  <Typography component="span" {...props} />
 );
 
 export default Typography;
