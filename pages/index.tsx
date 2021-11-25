@@ -12,7 +12,7 @@ const Index: NextPage = () => {
         <Hero />
       </header>
       <main>
-        <Section title="About me">
+        <Section id="about" title="About me">
           <Typography.p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus
             aperiam atque debitis delectus explicabo facere, nobis nostrum
@@ -26,10 +26,10 @@ const Index: NextPage = () => {
             totam, ullam vero?
           </Typography.p>
         </Section>
-        <Section title="Skills">
+        <Section id="skills" title="Skills">
           <Skills />
         </Section>
-        <Section title="Career">
+        <Section id="career" title="Career">
           <Career />
         </Section>
       </main>

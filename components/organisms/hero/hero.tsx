@@ -29,7 +29,9 @@ const Hero = () => {
         </Container>
 
         <div className={styles.center}>
-          <FiChevronDown className={styles.chevron} size={32} />
+          <a className={styles.chevron} href="#about">
+            <FiChevronDown size={32} />
+          </a>
         </div>
       </div>
     </div>
