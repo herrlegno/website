@@ -1,5 +1,5 @@
 .point {
-  border: 2px solid var(--primary);
+  border: 2px solid;
   background: transparent;
   position: relative;
   width: 10px;
@@ -8,7 +8,7 @@
 
   &.active {
     &::after {
-      background: var(--primary);
+      background-color: currentColor;
       content: "";
       position: absolute;
       top: 50%;

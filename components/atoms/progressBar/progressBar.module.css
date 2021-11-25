@@ -17,13 +17,13 @@
   & .progressBar {
     width: 100%;
     height: 10px;
-    background: var(--secondary);
-    border: 1px solid var(--primary);
+    background: transparent;
+    border: 1px solid;
     border-radius: 16px;
 
     & .bar {
       height: 100%;
-      background: var(--primary);
+      background: currentColor;
       border-radius: 16px;
     }
   }

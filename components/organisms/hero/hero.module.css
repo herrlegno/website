@@ -4,6 +4,9 @@
 @import "../../../styles/mediaQueries.css";
 
 .hero {
+  --bg: #000;
+  --text: #fff;
+
   height: 100vh;
   position: relative;
 
@@ -13,7 +16,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background: var(--primary);
+    background: var(--bg);
     perspective: 300px;
     overflow: hidden;
 
@@ -51,7 +54,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    color: var(--secondary);
+    color: var(--text);
     padding-top: 20px;
     height: 100%;
 

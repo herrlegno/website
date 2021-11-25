@@ -1,6 +1,9 @@
 .container {
-  background: var(--secondary);
-  color: var(--primary);
+  --bg: var(--bg-secondary);
+  --text: var(--text-secondary);
+
+  background: var(--bg);
+  color: var(--text);
 
   & .section {
     display: flex;
@@ -12,8 +15,8 @@
   }
 
   &:nth-child(even) {
-    --primary: var(--inverted-primary);
-    --secondary: var(--inverted-secondary);
+    --bg: var(--bg-primary);
+    --text: var(--text-primary);
 
     & .section {
       & .title {

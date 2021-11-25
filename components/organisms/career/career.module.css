@@ -10,15 +10,15 @@
 
     &::before {
       content: "";
-      width: 1px;
-      background: var(--primary);
+      width: 2px;
+      background: currentColor;
       height: 13px;
     }
 
     &::after {
       content: "";
-      width: 1px;
-      background: var(--primary);
+      width: 2px;
+      background: currentColor;
       height: 100%;
     }
   }
