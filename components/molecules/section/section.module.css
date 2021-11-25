@@ -1,0 +1,24 @@
+.container {
+  background: var(--secondary);
+  color: var(--primary);
+
+  & .section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  & .content {
+    flex: 1;
+  }
+
+  &:nth-child(even) {
+    --primary: var(--inverted-primary);
+    --secondary: var(--inverted-secondary);
+
+    & .section {
+      & .title {
+        text-align: right;
+      }
+    }
+  }
+}
