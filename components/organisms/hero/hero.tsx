@@ -24,9 +24,6 @@ const Hero = () => {
             <LightSaber />
           </div>
           <div className={classnames(styles.center, styles.profileInformation)}>
-            <Typography.p variant="h2" className={styles.glare}>
-              I am
-            </Typography.p>
             <ProfileCard />
           </div>
         </Container>

@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import Hero from "components/molecules/hero/hero";
+import Hero from "components/organisms/hero/hero";
 
 const Index: NextPage = () => {
   return <Hero />;
