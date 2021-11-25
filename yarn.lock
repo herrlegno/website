@@ -1476,6 +1476,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"date-fns@npm:^2.26.0":
+  version: 2.26.0
+  resolution: "date-fns@npm:2.26.0"
+  checksum: 49ad59bc788134a6552ef4e4af0d18792001c1ca0070d543de4f36aba5761058b6e6a57b8ca51dd3b0f07f3bd55376b8bc69602bd7940648ba3869c5253c6ae8
+  languageName: node
+  linkType: hard
+
 "debug@npm:2, debug@npm:^2.6.9":
   version: 2.6.9
   resolution: "debug@npm:2.6.9"
@@ -5894,6 +5901,7 @@ __metadata:
     "@types/react": 17.0.35
     browserslist: ^4.18.1
     classnames: ^2.3.1
+    date-fns: ^2.26.0
     eslint: 7
     eslint-config-next: 12.0.4
     eslint-config-prettier: ^8.3.0

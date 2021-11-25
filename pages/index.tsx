@@ -2,6 +2,8 @@ import type { NextPage } from "next";
 import Hero from "components/organisms/hero/hero";
 import Section from "components/molecules/section/section";
 import Skills from "components/organisms/skills/skills";
+import Career from "components/organisms/career/career";
+import Typography from "../components/atoms/typography/typography";
 
 const Index: NextPage = () => {
   return (
@@ -10,11 +12,26 @@ const Index: NextPage = () => {
         <Hero />
       </header>
       <main>
-        <Section title="About me" />
+        <Section title="About me">
+          <Typography.p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus
+            aperiam atque debitis delectus explicabo facere, nobis nostrum
+            numquam omnis provident quas repellat, sed sit temporibus unde velit
+            vitae. Autem, tenetur.
+          </Typography.p>
+          <Typography.p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic
+            mollitia odit officiis quo unde voluptate! Accusantium assumenda aut
+            autem cupiditate delectus, deserunt id impedit maxime minima neque
+            totam, ullam vero?
+          </Typography.p>
+        </Section>
         <Section title="Skills">
           <Skills />
         </Section>
-        <Section title="Career" />
+        <Section title="Career">
+          <Career />
+        </Section>
       </main>
     </>
   );

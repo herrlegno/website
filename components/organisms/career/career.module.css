@@ -1,0 +1,41 @@
+.job {
+  display: grid;
+  grid-template-columns: min-content auto;
+  grid-gap: 30px;
+
+  & .branch {
+    display: grid;
+    place-items: center;
+    grid-template-rows: min-content min-content auto;
+
+    &::before {
+      content: "";
+      width: 1px;
+      background: var(--primary);
+      height: 13px;
+    }
+
+    &::after {
+      content: "";
+      width: 1px;
+      background: var(--primary);
+      height: 100%;
+    }
+  }
+
+  &:first-child {
+    & .branch {
+      &::before {
+        width: 0;
+      }
+    }
+  }
+
+  &:last-child {
+    & .branch {
+      &::after {
+        width: 0;
+      }
+    }
+  }
+}
