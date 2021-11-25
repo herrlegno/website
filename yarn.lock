@@ -4722,6 +4722,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-icons@npm:^4.3.1":
+  version: 4.3.1
+  resolution: "react-icons@npm:4.3.1"
+  peerDependencies:
+    react: "*"
+  checksum: 2cc608acdd3e906aa3aaee290b8398220639677c949382d86e554020e5dab6a9f1ed7484418aa5272cb5c5c018e1fc9a323d433d901697a76530029f9ecb1263
+  languageName: node
+  linkType: hard
+
 "react-is@npm:17.0.2":
   version: 17.0.2
   resolution: "react-is@npm:17.0.2"
@@ -5572,15 +5581,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tabler-icons-react@npm:^1.36.0":
-  version: 1.36.0
-  resolution: "tabler-icons-react@npm:1.36.0"
-  peerDependencies:
-    react: ">= 16.8.0"
-  checksum: 2ed13cc41543f6e3ef536ee979163ebfeedc2f4602e5262d280714cd18120cc6283219ecbde77a4df5976038685baa0e01e1948dac4381d5ebf6ab4540a978c7
-  languageName: node
-  linkType: hard
-
 "tar@npm:^6.0.2, tar@npm:^6.1.2":
   version: 6.1.11
   resolution: "tar@npm:6.1.11"
@@ -5908,9 +5908,9 @@ __metadata:
     prettier: ^2.4.1
     react: 17.0.2
     react-dom: 17.0.2
+    react-icons: ^4.3.1
     stylelint: ^14.1.0
     stylelint-config-standard: ^24.0.0
-    tabler-icons-react: ^1.36.0
     typescript: 4.4.4
   languageName: unknown
   linkType: soft

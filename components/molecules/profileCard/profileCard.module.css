@@ -35,6 +35,8 @@
 
     & a {
       color: white;
+      display: flex;
+      align-items: center;
 
       &:hover {
         color: rgb(55 132 214 /100%);

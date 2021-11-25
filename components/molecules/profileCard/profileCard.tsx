@@ -4,12 +4,8 @@ import Typography from "components/atoms/typography/typography";
 import ProfileImage from "public/images/profile-picture.jpg";
 import useTilt from "hooks/useTilt";
 import Divider from "components/atoms/divider/divider";
-import {
-  BrandGithub,
-  BrandLinkedin,
-  BrandTwitter,
-  Mail,
-} from "tabler-icons-react";
+import { SiGithub, SiLinkedin, SiTwitter } from "react-icons/si";
+import { FiMail } from "react-icons/fi";
 
 import styles from "./profileCard.module.css";
 
@@ -38,28 +34,28 @@ const ProfileCard = () => {
           rel="noopener noreferrer"
           target="_blank"
         >
-          <BrandGithub />
+          <SiGithub size={24} />
         </a>
         <a
           href="https://twitter.com/herrlegno"
           rel="noopener noreferrer"
           target="_blank"
         >
-          <BrandTwitter />
+          <SiTwitter size={24} />
         </a>
         <a
           href="https://www.linkedin.com/in/herrlegno/"
           rel="noopener noreferrer"
           target="_blank"
         >
-          <BrandLinkedin />
+          <SiLinkedin size={24} />
         </a>
         <a
           href="mailto://alejandrolegno@gmail.com"
           rel="noopener noreferrer"
           target="_blank"
         >
-          <Mail />
+          <FiMail size={24} />
         </a>
       </div>
     </div>

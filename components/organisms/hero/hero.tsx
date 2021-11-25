@@ -3,7 +3,7 @@ import Container from "components/atoms/container/container";
 import LightSaber from "components/molecules/lightsaber/lightsaber";
 import ProfileCard from "components/molecules/profileCard/profileCard";
 import classnames from "classnames";
-import { ChevronDown } from "tabler-icons-react";
+import { FiChevronDown } from "react-icons/fi";
 
 import styles from "./hero.module.css";
 
@@ -29,7 +29,7 @@ const Hero = () => {
         </Container>
 
         <div className={styles.center}>
-          <ChevronDown className={styles.chevron} size={36} />
+          <FiChevronDown className={styles.chevron} size={32} />
         </div>
       </div>
     </div>
