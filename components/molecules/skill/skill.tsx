@@ -7,7 +7,7 @@ import styles from "./skill.module.css";
 interface SkillProps {
   label: string;
   icon?: ReactNode;
-  rate: number;
+  rate?: number;
 }
 
 const Skill = ({ label, icon, rate }: SkillProps) => {
@@ -15,7 +15,9 @@ const Skill = ({ label, icon, rate }: SkillProps) => {
     <div className={styles.container}>
       <Typography.span variant="h3">{label}</Typography.span>
       {icon}
-      <ProgressBar value={rate} className={styles.progressBar} />
+      {rate && (
+        <ProgressBar value={rate as number} className={styles.progressBar} />
+      )}
     </div>
   );
 };
