@@ -1,4 +1,5 @@
-import Typography from "../../atoms/typography/typography";
+import { ReactNode } from "react";
+import Typography from "components/atoms/typography/typography";
 import {
   differenceInMonths,
   differenceInYears,
@@ -11,16 +12,17 @@ import styles from "./job.module.css";
 interface JobProps {
   company: string;
   title: string;
-  description: string;
-  start: Date;
-  finish?: Date;
+  description: ReactNode;
+  start: string;
+  finish?: string | null;
 }
 
 const Job = ({ company, title, description, start, finish }: JobProps) => {
-  const finishDate = finish ?? Date.now();
+  const startDate = new Date(start);
+  const finishDate = finish ? new Date(finish) : Date.now();
   const duration = {
-    years: differenceInYears(finishDate, start),
-    months: differenceInMonths(finishDate, start) % 12,
+    years: differenceInYears(finishDate, startDate),
+    months: differenceInMonths(finishDate, startDate) % 12,
   };
   return (
     <div className={styles.container}>
@@ -30,15 +32,15 @@ const Job = ({ company, title, description, start, finish }: JobProps) => {
             {company}
           </Typography.p>
           <Typography.span className={styles.duration}>
-            {format(start, "LLLL, Y")} -{" "}
-            {finish ? format(finish, "LLLL, Y") : "Current"} (
+            {format(startDate, "LLLL, Y")} -{" "}
+            {finish ? format(finishDate, "LLLL, Y") : "Current"} (
             {formatDuration(duration)})
           </Typography.span>
         </div>
 
         <Typography.p variant="h4">{title}</Typography.p>
       </div>
-      <Typography.p className={styles.description}>{description}</Typography.p>
+      <div className={styles.description}>{description}</div>
     </div>
   );
 };

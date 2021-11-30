@@ -4,14 +4,14 @@ import Typography from "components/atoms/typography/typography";
 import ProfileImage from "public/images/profile-picture.jpg";
 import useTilt from "hooks/useTilt";
 import Divider from "components/atoms/divider/divider";
-import { SiGithub, SiLinkedin, SiTwitter } from "react-icons/si";
-import { FiMail } from "react-icons/fi";
 
 import styles from "./profileCard.module.css";
+import { useProfileData } from "../../../hooks/useProfileData";
 
 const ProfileCard = () => {
   const cardRef = useRef<HTMLDivElement>(null);
   useTilt(cardRef);
+  const { name, social } = useProfileData();
   return (
     <div className={styles.card} ref={cardRef}>
       <div className={styles.imageContainer}>
@@ -25,38 +25,15 @@ const ProfileCard = () => {
         />
       </div>
       <Typography.p variant="h3" className={styles.name}>
-        Alejandro González Alonso
+        {name}
       </Typography.p>
-      <Divider>Contact</Divider>
+      <Divider>Social</Divider>
       <div className={styles.contactLinks}>
-        <a
-          href="https://github.com/herrlegno"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          <SiGithub size={24} />
-        </a>
-        <a
-          href="https://twitter.com/herrlegno"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          <SiTwitter size={24} />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/herrlegno/"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          <SiLinkedin size={24} />
-        </a>
-        <a
-          href="mailto://alejandrolegno@gmail.com"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          <FiMail size={24} />
-        </a>
+        {social.map(({ icon, url }, index) => (
+          <a key={index} href={url} rel="noopener noreferrer" target="_blank">
+            {icon}
+          </a>
+        ))}
       </div>
     </div>
   );
