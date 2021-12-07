@@ -1,5 +1,11 @@
 import { useMemo } from "react";
 
+declare global {
+  interface Window {
+    opera?: any;
+  }
+}
+
 const useIsMobile = () => {
   const isMobile = useMemo(() => {
     if (typeof window !== "undefined") {
