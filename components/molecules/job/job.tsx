@@ -19,11 +19,12 @@ interface JobProps {
 
 const Job = ({ company, title, description, start, finish }: JobProps) => {
   const startDate = new Date(start);
-  const finishDate = finish ? new Date(finish) : Date.now();
+  const finishDate = finish ? new Date(finish) : new Date();
   const duration = {
     years: differenceInYears(finishDate, startDate),
     months: differenceInMonths(finishDate, startDate) % 12,
   };
+
   return (
     <div className={styles.container}>
       <div>
