@@ -12,7 +12,7 @@ import styles from "./job.module.css";
 interface JobProps {
   company: string;
   title: string;
-  description: ReactNode;
+  description?: ReactNode;
   start: string;
   finish?: string | null;
 }
@@ -41,7 +41,7 @@ const Job = ({ company, title, description, start, finish }: JobProps) => {
 
         <Typography.p variant="h4">{title}</Typography.p>
       </div>
-      <div className={styles.description}>{description}</div>
+      {description && <div className={styles.description}>{description}</div>}
     </div>
   );
 };

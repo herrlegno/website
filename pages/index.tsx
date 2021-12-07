@@ -4,8 +4,18 @@ import Section from "components/molecules/section/section";
 import Skills from "components/organisms/skills/skills";
 import Career from "components/organisms/career/career";
 import { useProfileData } from "../hooks/useProfileData";
+import dynamic from "next/dynamic";
+import Resume from "components/organisms/resume/resume";
+import Typography from "../components/atoms/typography/typography";
+import Button from "components/atoms/button/button";
+import { FiDownload } from "react-icons/fi";
 
 import styles from "styles/pages/index.module.css";
+
+const GeneratePDF = dynamic(
+  () => import("components/organisms/generatePdf/generatePdf"),
+  { ssr: false }
+);
 
 const Index: NextPage = () => {
   const { about } = useProfileData();
@@ -23,6 +33,19 @@ const Index: NextPage = () => {
         </Section>
         <Section id="career" title="Career">
           <Career />
+        </Section>
+        <Section id="resume">
+          <div className={styles.resume}>
+            <Typography.h2>Do you need a Resume?</Typography.h2>
+            <GeneratePDF
+              trigger={
+                <Button variant="secondary">
+                  <FiDownload size={32} />
+                </Button>
+              }
+              pdf={<Resume />}
+            />
+          </div>
         </Section>
       </main>
     </>

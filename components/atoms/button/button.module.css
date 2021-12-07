@@ -1,0 +1,29 @@
+.button {
+  font-weight: bold;
+  padding: 20px;
+  border: 0;
+  text-transform: uppercase;
+
+  &.primary {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+
+    &:hover {
+      color: var(--text-secondary);
+      background: var(--bg-secondary);
+    }
+  }
+
+  &.secondary {
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+
+    &:hover {
+      --color: rgb(55 132 214 /100%);
+
+      color: var(--text-primary);
+      background: var(--color);
+      box-shadow: 0 0 10px 0 var(--color);
+    }
+  }
+}

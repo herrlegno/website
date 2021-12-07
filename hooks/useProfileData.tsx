@@ -22,46 +22,52 @@ import {
   SiVuedotjs,
 } from "react-icons/si";
 import { FiDatabase, FiMail } from "react-icons/fi";
-import Image from "next/image";
 import Typography from "components/atoms/typography/typography";
-import { ReactNode } from "react";
+import { ReactElement } from "react";
 
 interface Data {
   name: string;
   social: {
-    icon: ReactNode;
+    icon: ReactElement;
     url: string;
+    label: string;
   }[];
-  about: ReactNode;
+  about: ReactElement;
   skills: {
-    [index: string]: { label: string; icon: ReactNode; rate?: number }[];
+    [index: string]: { label: string; icon: ReactElement; rate?: number }[];
   };
+  languages: { label: string; icon: ReactElement; aspectRatio: number }[];
   career: {
     company: string;
     title: string;
-    description: ReactNode;
+    description?: ReactElement;
     dates: [string, string | null];
   }[];
 }
 
+/* eslint-disable @next/next/no-img-element */
 const data: Data = {
   name: "Alejandro González Alonso",
   social: [
     {
       icon: <SiGithub size={24} />,
       url: "https://github.com/herrlegno",
+      label: "herrlegno",
     },
     {
       icon: <SiTwitter size={24} />,
       url: "https://twitter.com/herrlegno",
+      label: "@herrlegno",
     },
     {
       icon: <SiLinkedin size={24} />,
       url: "https://www.linkedin.com/in/herrlegno/",
+      label: "herrlegno",
     },
     {
       icon: <FiMail size={24} />,
       url: "mailto://alejandrolegno@gmail.com",
+      label: "alejandrolegno@gmail.com",
     },
   ],
   about: (
@@ -170,32 +176,25 @@ const data: Data = {
         icon: <SiCypress size={64} />,
       },
     ],
-    languages: [
-      {
-        label: "Spanish (Native)",
-        icon: (
-          <Image
-            src="/images/spain-flag.svg"
-            width={52 * 1.5}
-            height={52}
-            alt="Spanish Flag"
-          />
-        ),
-      },
-      {
-        label: "English",
-        icon: (
-          <Image
-            src="/images/uk-flag.svg"
-            width={52 * 2}
-            height={52}
-            alt="United Kingdom Flag"
-          />
-        ),
-      },
-    ],
   },
+  languages: [
+    {
+      label: "Spanish (Native)",
+      aspectRatio: 1.5,
+      icon: <img src="/images/spain-flag.svg" alt="Spanish Flag" />,
+    },
+    {
+      label: "English",
+      aspectRatio: 2,
+      icon: <img src="/images/uk-flag.svg" alt="United Kingdom Flag" />,
+    },
+  ],
   career: [
+    {
+      company: "Universidad de La Laguna",
+      title: "Degree in Computer Engenieering",
+      dates: ["2015-09-01", "2019-06-01"],
+    },
     {
       company: "Liga Canaria de eSports S.L.",
       title: "React Developer",
