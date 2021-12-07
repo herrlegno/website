@@ -192,7 +192,7 @@ const data: Data = {
   career: [
     {
       company: "Universidad de La Laguna",
-      title: "Degree in Computer Engenieering",
+      title: "Degree in Computer Engineering",
       dates: ["2015-09-01", "2019-06-01"],
     },
     {
