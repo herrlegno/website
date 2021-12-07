@@ -1,0 +1,22 @@
+.point {
+  border: 2px solid;
+  background: transparent;
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+
+  &.active {
+    &::after {
+      background-color: currentColor;
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 50%;
+      height: 50%;
+      border-radius: 50%;
+    }
+  }
+}

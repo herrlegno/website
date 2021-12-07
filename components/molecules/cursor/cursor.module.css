@@ -1,0 +1,21 @@
+.cursor {
+  pointer-events: none;
+
+  & .circle {
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    position: fixed;
+    mix-blend-mode: difference;
+
+    & svg {
+      position: relative;
+      transition: all 0.2s ease;
+      transition-property: height, width;
+    }
+
+    & circle {
+      fill: #f7f8fa;
+    }
+  }
+}
