@@ -7,7 +7,7 @@ import classnames from "classnames";
 
 interface SectionProps {
   id?: string;
-  title: string;
+  title?: string;
   className?: string;
 }
 
@@ -20,9 +20,11 @@ const Section = ({
   return (
     <Container center className={styles.container}>
       <section className={classnames(styles.section, className)} id={id}>
-        <Typography.h2 variant="h1" className={styles.title}>
-          {title}
-        </Typography.h2>
+        {title && (
+          <Typography.h2 variant="h1" className={styles.title}>
+            {title}
+          </Typography.h2>
+        )}
         <div className={styles.content}>{children}</div>
       </section>
     </Container>

@@ -4759,6 +4759,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-to-print@npm:^2.14.1":
+  version: 2.14.1
+  resolution: "react-to-print@npm:2.14.1"
+  dependencies:
+    prop-types: ^15.7.2
+  peerDependencies:
+    react: ^15.0.0 || ^16.0.0 || ^17.0.0
+    react-dom: ^15.0.0 || ^16.0.0 || ^17.0.0
+  checksum: 9bc4a170db5b9478fd95d8ac11c69a1cb0a319ebfb667ba89f5c87b518d12b6c29cd1180c5787e1b92d6009d4fad2d1c5562cd72820823bca9e36455c96dfc4d
+  languageName: node
+  linkType: hard
+
 "react@npm:17.0.2":
   version: 17.0.2
   resolution: "react@npm:17.0.2"
@@ -5917,6 +5929,7 @@ __metadata:
     react: 17.0.2
     react-dom: 17.0.2
     react-icons: ^4.3.1
+    react-to-print: ^2.14.1
     stylelint: ^14.1.0
     stylelint-config-standard: ^24.0.0
     typescript: 4.4.4
