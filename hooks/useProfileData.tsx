@@ -17,7 +17,6 @@ import {
   SiPython,
   SiReact,
   SiRuby,
-  SiTwitter,
   SiTypescript,
   SiVuedotjs,
 } from "react-icons/si";
@@ -53,11 +52,6 @@ const data: Data = {
       icon: <SiGithub size={24} />,
       url: "https://github.com/herrlegno",
       label: "herrlegno",
-    },
-    {
-      icon: <SiTwitter size={24} />,
-      url: "https://twitter.com/herrlegno",
-      label: "@herrlegno",
     },
     {
       icon: <SiLinkedin size={24} />,
