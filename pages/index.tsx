@@ -3,12 +3,13 @@ import Hero from "components/organisms/hero/hero";
 import Section from "components/molecules/section/section";
 import Skills from "components/organisms/skills/skills";
 import Career from "components/organisms/career/career";
-import { useProfileData } from "../hooks/useProfileData";
+import { useProfileData } from "hooks/useProfileData";
 import dynamic from "next/dynamic";
 import Resume from "components/organisms/resume/resume";
-import Typography from "../components/atoms/typography/typography";
+import Typography from "components/atoms/typography/typography";
 import Button from "components/atoms/button/button";
 import { FiDownload } from "react-icons/fi";
+import Head from "next/head";
 
 import styles from "styles/pages/index.module.css";
 
@@ -21,6 +22,9 @@ const Index: NextPage = () => {
   const { about } = useProfileData();
   return (
     <>
+      <Head>
+        <title>Home | herrlegno.dev</title>
+      </Head>
       <header>
         <Hero />
       </header>
