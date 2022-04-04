@@ -33,7 +33,7 @@ interface Data {
   }[];
   about: ReactElement;
   skills: {
-    [index: string]: { label: string; icon: ReactElement; rate?: number }[];
+    [index: string]: { label: string; icon: ReactElement }[];
   };
   languages: { label: string; icon: ReactElement; aspectRatio: number }[];
   career: {
@@ -80,64 +80,52 @@ const data: Data = {
       {
         label: "HTML5",
         icon: <SiHtml5 size={64} />,
-        rate: 7.5,
       },
       {
         label: "CSS3",
         icon: <SiCss3 size={64} />,
-        rate: 7.5,
       },
       {
         label: "JavaScript",
         icon: <SiJavascript size={64} />,
-        rate: 8,
       },
       {
         label: "TypeScript",
         icon: <SiTypescript size={64} />,
-        rate: 8,
       },
       {
         label: "React",
         icon: <SiReact size={64} />,
-        rate: 8,
       },
       {
         label: "Next.js",
         icon: <SiNextdotjs size={64} />,
-        rate: 7,
       },
       {
         label: "PostCSS",
         icon: <SiPostcss size={64} />,
-        rate: 6.5,
       },
       {
         label: "GraphQL",
         icon: <SiGraphql size={64} />,
-        rate: 6.5,
       },
       {
         label: "Jest",
         icon: <SiJest size={64} />,
-        rate: 5,
       },
     ],
     secondary: [
       {
         label: "Node.js",
         icon: <SiNodedotjs size={64} />,
-        rate: 6,
       },
       {
         label: "SQL",
         icon: <FiDatabase size={64} />,
-        rate: 5,
       },
       {
         label: "MongoDB",
         icon: <SiMongodb size={64} />,
-        rate: 5,
       },
     ],
     others: [

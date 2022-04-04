@@ -16,8 +16,8 @@ const Skills = () => {
             <Typography.h3 className={styles.section}>{section}</Typography.h3>
           </Divider>
           <div className={styles.grid}>
-            {values.map(({ label, icon, rate }) => (
-              <Skill key={label} label={label} icon={icon} rate={rate} />
+            {values.map(({ label, icon }) => (
+              <Skill key={label} label={label} icon={icon} />
             ))}
           </div>
         </Fragment>
