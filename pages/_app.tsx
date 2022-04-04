@@ -1,9 +1,10 @@
-import "../styles/globals.css";
-import "../styles/mediaQueries.css";
-import "../styles/colors.css";
+import SEO from "components/organisms/seo/seo";
 import type { AppProps } from "next/app";
 import dynamic from "next/dynamic";
 import Head from "next/head";
+import "styles/colors.css";
+import "styles/globals.css";
+import "styles/mediaQueries.css";
 
 const Cursor = dynamic(() => import("components/molecules/cursor/cursor"), {
   ssr: false,
@@ -34,6 +35,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
         <link rel="shortcut icon" href="/images/favicon/favicon.ico" />
       </Head>
+      <SEO />
       <Component {...pageProps} />
       <Cursor />
     </>
