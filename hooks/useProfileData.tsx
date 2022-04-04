@@ -1,3 +1,6 @@
+import Typography from "components/atoms/typography/typography";
+import { ReactElement } from "react";
+import { FiDatabase, FiMail } from "react-icons/fi";
 import {
   SiCplusplus,
   SiCss3,
@@ -20,9 +23,6 @@ import {
   SiTypescript,
   SiVuedotjs,
 } from "react-icons/si";
-import { FiDatabase, FiMail } from "react-icons/fi";
-import Typography from "components/atoms/typography/typography";
-import { ReactElement } from "react";
 
 interface Data {
   name: string;
@@ -233,7 +233,20 @@ const data: Data = {
           </ul>
         </>
       ),
-      dates: ["2021-01-10", null],
+      dates: ["2021-01-10", "2022-02-05"],
+    },
+    {
+      company: "dezzai",
+      title: "Senior React Developer",
+      description: (
+        <>
+          Tasks:
+          <ul>
+            <li>Front-end Development with React</li>
+          </ul>
+        </>
+      ),
+      dates: ["2022-02-07", null],
     },
   ],
 };
