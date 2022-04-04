@@ -1,12 +1,12 @@
-import { useRef } from "react";
-import Image from "next/image";
-import Typography from "components/atoms/typography/typography";
-import ProfileImage from "public/images/profile-picture.jpg";
-import useTilt from "hooks/useTilt";
 import Divider from "components/atoms/divider/divider";
+import Typography from "components/atoms/typography/typography";
+import useTilt from "hooks/useTilt";
+import Image from "next/image";
+import ProfileImage from "public/images/profile-picture.jpg";
+import { useRef } from "react";
+import { useProfileData } from "../../../hooks/useProfileData";
 
 import styles from "./profileCard.module.css";
-import { useProfileData } from "../../../hooks/useProfileData";
 
 const ProfileCard = () => {
   const cardRef = useRef<HTMLDivElement>(null);
@@ -22,6 +22,7 @@ const ProfileCard = () => {
           placeholder="blur"
           className={styles.image}
           alt="Alejandro's Profile Picture"
+          priority
         />
       </div>
       <Typography.p variant="h3" className={styles.name}>
