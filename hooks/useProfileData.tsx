@@ -68,10 +68,10 @@ const data: Data = {
     <>
       <Typography.p>
         I am Alejandro, a React developer that loves the tech world and be at
-        the bleeding edge of front-end tech. Currently working as a fullstack
-        with React, Next.js and Spring. From time to time I also like to do some
-        game development related things with UE4, because I love playing them as
-        well as coding them.
+        the bleeding edge of front-end tech. Currently working as a Senior React
+        Developer with TypeScript and Tailwind. From time to time I also like to
+        do some game development related things with Unreal Engine, because I
+        love playing them as well as coding them.
       </Typography.p>
     </>
   ),
