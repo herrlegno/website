@@ -60,8 +60,8 @@ const data: Data = {
     },
     {
       icon: <FiMail size={24} />,
-      url: "mailto://alejandrolegno@gmail.com",
-      label: "alejandrolegno@gmail.com",
+      url: "mailto://alejandroglezalonso@gmail.com",
+      label: "alejandroglezalonso@gmail.com",
     },
   ],
   about: (
